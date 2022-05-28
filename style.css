@@ -1,0 +1,31 @@
+.contaienr {
+    width: 500px;
+    height: 300px;
+    background-color: brown;
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+}
+
+.action_groupe {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.action_groupe button {
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 25px;
+}
+
+.value {
+    position: absolute;
+    top: 80px;
+    font-size: 50px;
+    color: aliceblue;
+    left: 50%;
+    transform: translateX(-50%);
+}
