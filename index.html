@@ -11,37 +11,25 @@
 
 <body>
 
-
-    <div class="contaienr">
-        <div class="value">0</div>
+    <div class="container">
+        <div class="value">#ffffff</div>
         <div class="action_groupe">
-            <button class="dec">Decrement</button>
-            <button class="res">Reset</button>
-            <button class="inc">Increment</button>
+            <button class="gen">Generate</button>
         </div>
     </div>
 
-
     <script>
         const value = document.querySelector(".value")
-        const dec = document.querySelector(".dec")
-        const inc = document.querySelector(".inc")
-        const res = document.querySelector(".res")
+        const generate = document.querySelector(".gen")
+
+        generate.addEventListener("click", () => {
+            const gen = Math.random().toString(16).slice(2, 8)
+            value.innerHTML = "#" + gen;
+            document.body.style.background = "#" + gen
+        })
 
 
-        dec.addEventListener("click", () => {
-            if (value.innerHTML === "0") {
-                value.innerHTML = 0
-            } else {
-                value.innerHTML--
-            }
-        })
-        inc.addEventListener("click", () => {
-            value.innerHTML++
-        })
-        res.addEventListener("click", () => {
-            value.innerHTML = 0
-        })
+
     </script>
 </body>
 
